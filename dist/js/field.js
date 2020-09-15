@@ -407,11 +407,8 @@ var render = function() {
               {
                 key: "a-" + localeKey,
                 staticClass:
-                  "inline-block font-bold cursor-pointer mr-2 animate-text-color select-none border-primary",
-                class: {
-                  "text-60": localeKey !== _vm.currentLocale,
-                  "text-primary border-b-2": localeKey === _vm.currentLocale
-                },
+                  "inline-block cursor-pointer mr-4 animate-text-color select-none  mini-tab",
+                class: { active: localeKey === _vm.currentLocale },
                 on: {
                   click: function($event) {
                     return _vm.changeTab(localeKey)
@@ -28925,11 +28922,8 @@ var render = function() {
             {
               key: "a-" + localeKey,
               staticClass:
-                "inline-block font-bold cursor-pointer mr-2 animate-text-color select-none border-primary",
-              class: {
-                "text-60": localeKey !== _vm.currentLocale,
-                "text-primary border-b-2": localeKey === _vm.currentLocale
-              },
+                "inline-block cursor-pointer mr-4 animate-text-color select-none mini-tab",
+              class: { active: localeKey === _vm.currentLocale },
               on: {
                 click: function($event) {
                   return _vm.changeTab(localeKey)
@@ -28951,8 +28945,7 @@ var render = function() {
                 }
               ],
               ref: "field",
-              staticClass:
-                "mt-4 w-full form-control form-input form-input-bordered py-3 min-h-textarea",
+              staticClass: "w-full py-3 h-auto custom-textarea mt-4",
               class: _vm.errorClasses,
               attrs: {
                 id: _vm.field.name,

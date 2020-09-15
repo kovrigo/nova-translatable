@@ -3,8 +3,8 @@
         <template slot="value">
 
             <a 
-                class="inline-block font-bold cursor-pointer mr-2 animate-text-color select-none border-primary" 
-                :class="{ 'text-60': localeKey !== currentLocale, 'text-primary border-b-2': localeKey === currentLocale }"
+                class="inline-block cursor-pointer mr-4 animate-text-color select-none  mini-tab" 
+                :class="{ 'active': localeKey === currentLocale }"
                 :key="`a-${localeKey}`" 
                 v-for="(locale, localeKey) in field.locales"
                 @click="changeTab(localeKey)"

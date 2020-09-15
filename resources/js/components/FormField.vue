@@ -16,8 +16,8 @@
         </div>
         <div class="px-8 py-6" :class="computedWidth">
             <a
-                class="inline-block font-bold cursor-pointer mr-2 animate-text-color select-none border-primary"
-                :class="{ 'text-60': localeKey !== currentLocale, 'text-primary border-b-2': localeKey === currentLocale }"
+                class="inline-block cursor-pointer mr-4 animate-text-color select-none mini-tab"
+                :class="{ 'active': localeKey === currentLocale }"
                 :key="`a-${localeKey}`"
                 v-for="(locale, localeKey) in field.locales"
                 @click="changeTab(localeKey)"
@@ -28,7 +28,7 @@
             <textarea
                 ref="field"
                 :id="field.name"
-                class="mt-4 w-full form-control form-input form-input-bordered py-3 min-h-textarea"
+                class="w-full py-3 h-auto custom-textarea mt-4"
                 :class="errorClasses"
                 :placeholder="field.name"
                 :disabled="isReadonly"
