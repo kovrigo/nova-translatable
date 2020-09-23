@@ -271,9 +271,7 @@ var render = function() {
         staticClass: "py-1",
         domProps: { innerHTML: _vm._s(_vm.value) }
       })
-    : _c("span", { staticClass: "whitespace-no-wrap" }, [
-        _vm._v(_vm._s(_vm.value))
-      ])
+    : _c("span", {}, [_vm._v(_vm._s(_vm.value))])
 }
 var staticRenderFns = []
 render._withStripped = true
