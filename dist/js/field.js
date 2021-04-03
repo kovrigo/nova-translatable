@@ -272,7 +272,9 @@ var render = function() {
         class: "text-" + _vm.field.textAlign,
         domProps: { innerHTML: _vm._s(_vm.value) }
       })
-    : _c("span", {}, [_vm._v(_vm._s(_vm.value))])
+    : _c("div", { class: "text-" + _vm.field.textAlign }, [
+        _vm._v(_vm._s(_vm.value))
+      ])
 }
 var staticRenderFns = []
 render._withStripped = true
